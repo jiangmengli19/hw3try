@@ -1,0 +1,28 @@
+---
+title: "homeworkdoc"
+author: "jiangmengli19"
+date: "2019-10-18"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+```{r importdata}
+library(RCurl)
+download <- getURL("https://people.sc.fsu.edu/~jburkardt/data/csv/grades.csv")
+gradedata <- read.csv(text = download)
+View(gradedata)
+```
+
+Now we try to describe the grade data generally.
+Apart from that, we also try to describe the gradedata of first and second columns
+```{r}
+summary(gradedata)
+firstcoltest <- gradedata[["Test3"]]
+secondcoltest <- gradedata[["Test2"]]
+summary(firstcoltest)
+summary(secondcoltest)
+```
+
