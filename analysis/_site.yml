@@ -1,7 +1,7 @@
-name: "hw3try"
+name: hw3try
 output_dir: ../docs
 navbar:
-  title: "hw3try"
+  title: hw3try
   left:
   - text: Home
     href: index.html
@@ -9,6 +9,10 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fa-github
+    text: Source code
+    href: https://github.com/jiangmengli19/hw3try
 output:
   workflowr::wflow_html:
     toc: yes
